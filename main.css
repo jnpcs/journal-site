@@ -39,4 +39,15 @@ background-color: rgb(0,167,230);
 
   .navbar-default .navbar-nav > li > a {
    color: white; /*Change active text color here*/
-    }
+}
+
+
+#advantages>div {
+	height: 130px;
+	text-align: center;
+}
+
+#footer {
+	background-color: rgb(0,167,230);
+	color: #fff;
+}
