@@ -1,9 +1,11 @@
 body {
+    /*background-color: rgb(219,219,219);*/
 	min-width: 480px;
 }
 
 #header {
-	background-color: rgb(0,167,230);
+	background-color: rgb(110,110,110);
+    /*background-color: rgb(83,207,255);*/
 	color: #fff;
 }
 
@@ -14,11 +16,13 @@ color: #000;  /*Sets the text hover color on navbar*/
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >   
  a:hover, .navbar-default .navbar-nav > .active > a:focus {
 color: white; /*BACKGROUND color for active*/
+/*background-color: rgb(83,207,255);*/
 background-color: rgb(0,167,230);
 }
 
   .navbar-default {
-    background-color: rgb(0,167,230);
+    background-color: rgb(110,110,110);
+    /*background-color: rgb(83,207,255);*/
     border-radius: 0px;
 	border-width: 0px;
 }
@@ -48,6 +52,16 @@ background-color: rgb(0,167,230);
 }
 
 #footer {
-	background-color: rgb(0,167,230);
+	background-color: rgb(110,110,110);
+    /*background-color: rgb(30, 153, 51);*/
 	color: #fff;
 }
+
+#button {
+display:block; 
+width:30px; 
+height:150px; 
+position:fixed; 
+right:50px;
+top:570px; 
+} 
