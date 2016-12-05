@@ -54,6 +54,52 @@
 
 
 
+    <!--main-->
+    <div class="container">
+        <!---->
+        <h2>Submit a paper</h2>
+    
+          
+                <form class="form-horizontal">
+                    <h4>Information about author(s)</h4>
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" for="authorName">Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="authorName" placeholder="Enter name" />
+                                <p style="color:slategrey">First name, last name</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" for="universityName">University name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="universityName"  placeholder="Enter university name" />
+                                <p style="color:slategrey">Full university name</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-1" for="email">E-mail:</label>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control" id="email" placeholder="Enter e-mail">
+                            </div>
+                        </div>
+                        <button id="addAuthorButton" type="button" class="btn" style="float:left"><b>+</b></button>
+                        <br />
+                        <button type="submit" class="btn btn-default" style="float:right">Submit</button>
+
+                   <script>
+                       $(document).ready(function(){
+                           if($("addAuthorButton").click()){
+                               $("container").addClass("form-horizontal")
+                           }
+                       }
+                       )                    
+                   </script>
+                </form>
+           
+    </div>
+   
+
 
     <!--footer-->
 
@@ -103,7 +149,7 @@
                     <p style="text-align:left"> Copyright &copy; Nonlinear Phenomena in Complex Systems. </p>
                 </div>
 
-                <div class="col-sm-6" id="button">
+                <div class="col-sm-6" id="topButton">
                     <a href="#top"><img src="top-logo.png" alt="Top of page" border="0" height="50" width="50" style="float:right"></a>
                 </div>
             </div>
