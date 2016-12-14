@@ -24,8 +24,7 @@ $authors = "CREATE TABLE authors (	author_id INT(11) AUTO_INCREMENT PRIMARY KEY 
 									author_name VARCHAR(50),
 									author_email VARCHAR(50) NULL,
 									correspondence TINYINT(1) DEFAULT 0,
-									org_name VARCHAR(255),
-									org_address VARCHAR(255))";
+									affiliation VARCHAR(255))";
 if(!mysql_query($authors, $db)) {
 	echo "error 'authors'<br/>";
 }else {
@@ -40,7 +39,7 @@ if(!mysql_query($papers, $db)) {
 	echo "table 'papers' has been created<br/>";
 }
 
-$papers_authors = "CREATE TABLE papers_authors (	pa_num INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+$papers_authors = "CREATE TABLE papers_authors (	pap_auth_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 													paper_id INT(11),
 													author_id INT(11))";
 if(!mysql_query($papers_authors, $db)) {
@@ -49,7 +48,7 @@ if(!mysql_query($papers_authors, $db)) {
 	echo "table 'papers_authors' has been created<br/>";
 }
 
-$paper_variant = "CREATE TABLE paper_variant (	pv_num INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
+$paper_variant = "CREATE TABLE paper_variant (	pap_var_id INT(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
 												paper_id INT(11),
 												paper_name VARCHAR(255),
 												pacs_numbers VARCHAR(50) NULL,
