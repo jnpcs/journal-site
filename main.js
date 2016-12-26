@@ -18,3 +18,7 @@ function addAuthor() {
 	el.parentNode.insertBefore(newDiv,document.getElementById("plusButton"));
 	authorsNumber++;
 }
+
+function toggleLoginForm() {
+	$('#loginForm').toggle();
+}
