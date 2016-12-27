@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nonlinear Phenomena in Complex Systems </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Nonlinear Phenomena in Complex Systems is an interdisciplinary journal focused on theoretical and experimental research of complex systems encountered in both natural and social sciences">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid" id="header">
+        <div class="container">
+            <h1>Nonlinear Phenomena in Complex Systems</h1>
+            <h3>An Interdisciplinary  Journal</h3>
+        </div>
+    </div>
+
+
+
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Read<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="abstracts/abstracts.html">Contents</a></li>
+                        <li><a href="sof.html">Order form</a></li>
+                        <li><a href="notify.html">Subscribe online</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Authors<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="instructions.html">Instructions for authors</a></li>
+                        <li><a href="submit.html">Submit a paper</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <ul id="put" class="nav navbar-nav navbar-right">
+                <li id="LoginButton"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="loginClick()"></span> Login</a></li>
+                <form id="LoginForm" class="form-inline" style="display:none">
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    <!--</div>
+                    <div class="form-group">-->
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        $(document).ready(function () {
+            $("#LoginButton").click(function () {
+                $("#LoginForm").show('slide', {direction: 'left'}, "slow");
+            });
+        });
+    </script>
+
+    <script>
+        $("#LoginButton").click(function () {
+            $("#LoginButton").hide();
+        });
+    </script>
+
+    <!-- Main -->
+    <div class="container">
+
+        <img src="title.gif" style="float:left; margin-right: 20px;" alt="Nonlinear Phenomena in Complex Systems" />
+        <br /><br />
+        <p>
+            <b>
+                <i>
+                    Nonlinear Phenomena in
+                    Complex Systems
+                </i> (NPCS)
+            </b> is a
+            quarterly journal, in which original research
+            papers and reviews are published.
+        </p>
+
+        <p>
+            Our primary goal is to provide a single forum  to strengthen links between basic and applied research,
+            theoretical and experimental methods
+            relating to nonlinear dynamics of complex systems in the natural and social sciences.
+            We also aim to bring together high-quality papers on all aspects
+            of nonlinear dynamics, including phenomena, modelling, and complexity.
+        </p>
+
+        <p>
+            We provide timely dissemination and mutual development of new ideas, principles, and techniques across the interdisciplinary front.
+        </p>
+        <br /> <br />
+        <p>
+            Areas this journal includes are:
+            <li>experiments;</li>
+            <li>computational and theoretical aspects of phase transitions;</li>
+            <li>critical phenomena;</li>
+            <li>self-organization, bifurcations, chaos;</li>
+            <li>fluctuation phenomena;</li>
+            <li>pattern formation;</li>
+            <li> fractals and complexity in physics, mathematics, chemistry, engineering, biology, social and economic sciences;</li>
+            <li> other areas of Scientific efforts.</li>
+        </p>
+
+
+
+        <p>
+            The first issue was published in December, 1998,
+            and now the journal achieved a respectable scientific quality.
+            Papers published in NPCS are continuously quoted in other high-rated international journals.
+            Since 2011 the <strong>NPCS</strong> Journal is included into the Scopus system.
+
+            We invite authors to <a href="submit.php" style="font-weight:bold">submit</a>  their papers on any topic covered by the journal.
+        </p>
+
+        <br />
+
+
+        <div id="advantages" class="row">
+
+            <div class="col-sm-6 col-md-3">
+                <img src="scopus-logo.jpg" alt="Scopus logo" title="Scopus logo" />
+                <p>SCOPUS rated</p>
+            </div>
+            <div class="col-sm-6 col-md-3">
+
+                <!-- <img src="ams-transparent-logo.png" alt="listed in AMS MathSciNet" title="listed in AMS MathSciNet" style="background-color: rgb(0,167,230); width: 230px"/> -->
+                <img src="ams-logo-web.png" alt="listed in AMS MathSciNet" title="listed in AMS MathSciNet" style="width: 230px" />
+                <p>listed in the AMS MathSciNet</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <img src="eps.gif" alt="EPS logo" title="EPS logo" style="" />
+                <p>Recognized by the European Physical Society</p>
+            </div>
+
+            <div class="col-sm-6 col-md-3">
+                <img src="Thomson-Reuters-logo.svg.png" alt="listed in AMS MathSciNet" title="listed in AMS MathSciNet" style="width: 230px" />
+                <p>In evaluation by Web of Knowledge</p>
+            </div>
+
+        </div> <!--advantages-->
+
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>News and Events</h2>
+
+                <h3>International Hans Hellmann Prosymposium "Quantum Chemistry of Materials"</h3>
+                <h3><small>November 2, 2016</small></h3>
+                <p> will be held in November 15-18, 2016 on the base of the Peter the Great Saint-Petersburg Polytechnic University, Saint-Petersburg, Russia. <a href="http://www.qcc.ru/fock/htdocs//symposium.en.php">Read more...</a></p>
+
+                <h3>Open access</h3>
+                <h3><small>August 12, 2013 </small></h3>
+                <p>
+                    Since 2013 the Journal supports the gold open access paper submission policy. See Instruction for authors section for detail.
+                    Issues 3 and 4 for the year 2014 of the Journal is the fully open access issue!
+                </p>
+                </p>
+            </div>
+
+            <div class="col-sm-6">
+                <h2>Editorial Board</h2>
+
+                <h4>Editors-in-Chief</h4>
+                <p>
+                    <span>Prof. Viatcheslav I. KUVSHINOV</span>
+                    Joint Institute of Power  and Nuclear Research "Sosny"
+                    of the National Academy of Sciences of Belarus, Minsk, Belarus
+                </p>
+                <p>
+                    <span>Prof. Alexei L. TOLSTIK</span>
+                    Department of Physics, Belarusian State University, Minsk, Belarus
+                </p>
+
+                <h4>Editorial Board</h4>
+                <p>
+                    A.&nbsp;Anagnostopulos (Greece), L.F.&nbsp;Babichev (Belarus),
+                    J.&nbsp;Bentsman (USA), A.&nbsp; Carbone (Italy), C.C.A.M.&nbsp;Gielin (The&nbsp;Netherlands),
+                    H.V.&nbsp;Grushevskaya (Belarus), W.&nbsp;Kittel
+                    (The&nbsp;Netherlands),
+                    Yu.S.&nbsp Kivshar ( Australia),
+                    G.G.&nbsp;Krylov (Belarus), A.D.&nbsp;Linkevich (Belarus),
+                    P.V.E.&nbsp;McClintock (United Kingdom), E.&nbsp;Mosekilde (Denmark),
+                    V.P.&nbsp;Parkhomenko (Belarus),
+                    S.K.&nbsp;Rakhmanov (Belarus), M.&nbsp;Robnik (Slovenia),
+                    A.&nbsp;Ruffing (Germany),V.A&nbsp;Samuilov (USA), G.&nbsp; Wunner(Germany).
+                </p>
+
+                <h4>International Advisory Board</h4>
+                <p>
+                    S.V.&nbsp;Ablameyko (Belarus), N.B.&nbsp;Abraham (USA), Y.&nbsp;Aizawa (Japan), V.M.&nbsp;Anishchik
+                    (Belarus), N.G.&nbsp;Antoniou (Greece), P.A.&nbsp;Apanasevich
+                    (Belarus), S.&nbsp;Bishop (United Kingdom), T. &nbsp; Bountis (Greece), G.&nbsp;Casati (Italy),
+                    P.&nbsp;Cvitanovic&acute; (USA), A.D.&nbsp;Dmitriev (Russia),
+                    M.I.&nbsp;Dykman (USA), L.&nbsp;Fortuna (Italy),
+                    V.A.&nbsp Gaisyonok (Belarus),
+                    S.&nbsp;Grossmann (Germany), H.&nbsp;Haken (Germany), R.&nbsp;Hwa
+                    (USA), W.A.&nbsp;Kaminski (Poland), S.A.&nbsp;Kashchenko (Russia),
+                    N.S.&nbsp;Kazak (Belarus), S.Ya.&nbsp;Kilin (Belarus),
+                    Y.&nbsp;Kuramoto (Japan), A.I.&nbsp;Lesnikovich (Belarus),
+                    P.&nbsp;Manneville (France), L.A.&nbsp;Melnikov (Russia),
+                    T.&nbsp;Mullin (United Kingdom), A.V. Mokshin (Russia), G.&nbsp;Nicolis (Belgium),
+                    V.A.&nbsp;Orlovich (Belarus), J.&nbsp;Parisi (Germany),
+                    A.&nbsp;Pankov( Belarus), K.&nbsp;Pyragas (Lithuania),
+                    O.E.&nbsp;R&ouml;ssler (Germany), N.N.&nbsp;Rosanov (Russia),
+                    V.A.&nbsp;Sadovnichi (Russia), V.A.&nbsp;Savva (Belarus),
+                    M.&nbsp;Sonis (Israel), M.&nbsp;Soskin (Ukraine), A.&nbsp;Stefanovska (United Kingdom),
+                    V.I.&nbsp;Strazhev (Belarus),  L.A.&nbsp;Yanovich (Belarus).
+                </p>
+
+
+
+            </div> <!-- editorial board -->
+
+            <br />
+            <h2>Supporting organizations</h2>
+            <br />
+            <br />
+            <!--<a href="#" style="color:black">
+                &quot;Education and Upbringing&quot;
+                Publishing
+            </a><p>(Minsk, Belarus)</p>-->
+
+
+
+            <div id="advantages2" class="row">
+
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://www.camtp.uni-mb.si/">
+                        <img src="maribor-logo1.jpg" style="width: 140px">
+
+                    </a> <br />Center for Applied Mathematics and Theoretical Physics <br />
+                    University of Maribor<p>
+                        (Maribor, Slovenia)
+                    </p>
+                </div>
+
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://www.bsu.by/">
+                        <img src="bsu-logo.png" style="width: 250px">
+
+                    </a><p>(Minsk, Belarus)</p>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://nasb.gov.by/eng/organizations/institutes/inofmi.html#off245">
+                        <img src="ifanbel-logo.png" style="width: 135px">
+                    </a> <br />B.I. Stepanov Institute of Physics of the National Academy
+                    of Sciences of Belarus<p> (Minsk, Belarus)</p>
+
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://fond.bas-net.by">
+                        <img src="foundation-logo5.jpg" style="width: 185px">
+                    </a>
+                    <p>
+                        Belarusian Republican Foundation for Fundamental
+                        Research (Minsk, Belarus)
+                    </p>
+                </div>
+
+
+
+            </div>
+
+
+            <br />   <div id="advantages1" class="row">
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://www.jinr.ru/"> <img src="JINR-logo1.png" style="width: 185px"> </a>
+                    <p style="text-align:center">
+                        (Dubna, Russia)
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://eng.spbstu.ru/">
+                        <img src="polytech-logo.png" style="width: 180px">
+                    </a> <p>(Saint Petersburg, Russia)</p>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://dept.physics.upenn.edu/">
+                        <img src="penn.gif" style="width: 150px">
+                    </a> <p>
+                        Department of Physics and Astronomy <br />
+                        University of Pennsylvania <br />
+                        (Philadelphia, USA)
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-md-3" style="text-align:center">
+                    <a href="http://www.yukawa.kyoto-u.ac.jp/">
+                        <img src="YITP.png" style="width: 230px">
+                    </a>
+                    <p style="text-align:center">
+                        Kyoto University
+                        (Kyoto, Japan)
+                    </p> <br> <br>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div><!--main-->
+
+
+
+
+    <div class="container-fluid" id="footer">
+        <div class="container">
+            ISSN 1561-4085 (Print), ISSN 1817-2458 (Online)
+            <br />
+
+
+
+            <div class="row">
+                <div class="col-sm-6" style="text-align: left">
+                    <p>
+                        <br /> <br /> Published by the &quot;Education and Upbringing&quot; Publishing,<br>
+                        Minsk, <br> Belarus
+                    </p>
+                    <p>
+                        Created, designed and maintained by <br>
+                        <a href="mailto:babichev@sosny.bas-net.by" style="color: black">Dr. Leonid F. Babichev</a> and
+                        <a href="mailto:krylov@bsu.by" style="color: black">Dr. George Krylov</a><br>
+                    </p>
+                </div>
+
+                <div class="col-sm-6" style="text-align: left">
+                    <br /> <br /> <b>Address of the Editorial Office:</b><br>
+                    Journal NPCS<br>
+                    <a href="http://nasb.gov.by/eng/organizations/institutes/inoteh.html#off260" style="color: black">
+                        Joint Institute for Power  and Nuclear Research &quot;Sosny&quot;
+                    </a>
+                    <br>
+                    99 Acad. Krasina Str. <br>
+                    Minsk 220072<br>
+                    Belarus<br><br>
+
+                    <b>E-mail:</b>
+                    <a href="mailto:j-npcs@sosny.bas-net.by" style="color: black"><b>j-npcs@sosny.bas-net.by</b></a>
+                    <br><br>
+
+                    <b>Fax: (+375) 17 391 13 35 </b>
+                </div>
+            </div>
+
+            <p> Last updated: <i>November 25, 2014</i><br> </p>
+
+            <div class="row">
+                <div class="col-sm-6" style="text-align: left">
+                    <p style="text-align:left"> Copyright &copy; Nonlinear Phenomena in Complex Systems. </p>
+                </div>
+
+                <div class="col-sm-6" id="topButton">
+                    <a href="#top"><img src="top-logo.png" alt="Top of page" border="0" height="50" width="50" style="float:right"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
