@@ -58,12 +58,13 @@ body {
 }
 
 #topButton {
-	display:block; 
+	display:none; 
 	width:30px; 
-	height:150px; 
+	height:30px; 
 	position:fixed; 
 	right: 50px;
-	bottom: 0px;
+	bottom: 50px;
+	border: 0;
 } 
 
 .textarea {

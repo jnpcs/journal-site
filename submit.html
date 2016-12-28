@@ -226,6 +226,14 @@
         </div>
     </div>
     <script src="main.js"></script>
-
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 30) {
+                $('#topButton').fadeIn();
+            } else {
+                $('#topButton').fadeOut();
+            }
+        });
+    </script>
 </body>
 </html>
