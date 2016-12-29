@@ -42,75 +42,90 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-					<div style="position:relative; display: none;" id="loginForm">
-						<div style="right:0px;top: 50px; z-index: 1;position: absolute; background-color: pink; padding: 15px;">
-							<input type="text" placeholder="email"/>
-							<input type="password" placeholder="password"/>
-							<button>Login</button> <button onclick="toggleLoginForm()">Cancel</button>
-						</div>
-					</div>
-					<a onclick="toggleLoginForm()"><span class="glyphicon glyphicon-log-in"></span>Login</a>
-				</li>
+            <ul id="put" class="nav navbar-nav navbar-right">
+                <li id="LoginButton"><a href="#"><span class="glyphicon glyphicon-log-in" onclick="loginClick()"></span> Login</a></li>
+                <form id="LoginForm" class="form-inline" style="display:none">
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email">
+                    <!--</div>
+                    <div class="form-group">-->
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </form>
             </ul>
         </div>
     </nav>
 
+    <script>
+        $(document).ready(function () {
+            $("#LoginButton").click(function () {
+                $("#LoginForm").show('slide', {direction: 'left'}, "slow");
+            });
+        });
+    </script>
+
+    <script>
+        $("#LoginButton").click(function () {
+            $("#LoginButton").hide();
+        });
+    </script>
 
     <!-- Main -->
     <div class="container">
 
         <img src="title.gif" style="float:left; margin-right: 20px;" alt="Nonlinear Phenomena in Complex Systems" />
-    <br /><br />    
-    <p>
+        <br /><br />
+        <p>
             <b>
                 <i>
                     Nonlinear Phenomena in
                     Complex Systems
                 </i> (NPCS)
             </b> is a
-            quarterly journal, where original research
+            quarterly journal, in which original research
             papers and reviews are published.
         </p>
 
-    <p>
-        Our primary goal is to provide a single forum to strengthen links between fundamental and applied research, 
-        theoretical and experimental methods 
-        related to nonlinear dynamics of complex systems in the natural and social sciences.
-         We also aim to bring together high-quality papers dedicated to every aspect 
-        of nonlinear dynamics, including phenomenology, simulation, and complexity. 
-    </p>
-
-    <p>
-        We provide timely dissemination and mutual development of new ideas, principles, and techniques across the interdisciplinary front.
-    </p>
-    <br /> <br />
         <p>
-            Scope of the journal includes:
-            <ul>
+            Our primary goal is to provide a single forum  to strengthen links between basic and applied research,
+            theoretical and experimental methods
+            relating to nonlinear dynamics of complex systems in the natural and social sciences.
+            We also aim to bring together high-quality papers on all aspects
+            of nonlinear dynamics, including phenomena, modelling, and complexity.
+        </p>
+
+        <p>
+            We provide timely dissemination and mutual development of new ideas, principles, and techniques across the interdisciplinary front.
+        </p>
+        <br /> <br />
+        <p>
+            Areas this journal includes are:
             <li>experiments;</li>
             <li>computational and theoretical aspects of phase transitions;</li>
             <li>critical phenomena;</li>
-            <li>self-organization, bifurcations, chaos;</li> 
-            <li>fluctuation phenomena;</li> 
+            <li>self-organization, bifurcations, chaos;</li>
+            <li>fluctuation phenomena;</li>
             <li>pattern formation;</li>
             <li> fractals and complexity in physics, mathematics, chemistry, engineering, biology, social and economic sciences;</li>
-        </ul>
+            <li> other areas of Scientific efforts.</li>
         </p>
 
 
 
         <p>
-            The first issue was published in December, 1998, 
-            and now the journal has achieved a respectable scientific quality. 
-            Papers published in NPCS are continuously quoted in other high-rated international journals. 
+            The first issue was published in December, 1998,
+            and now the journal achieved a respectable scientific quality.
+            Papers published in NPCS are continuously quoted in other high-rated international journals.
             Since 2011 the <strong>NPCS</strong> Journal is included into the Scopus system.
 
-            We invite authors to <a href="submit.php" style="font-weight:bold">submit</a>  their papers on any topic covered by the journal.            
+            We invite authors to <a href="submit.php" style="font-weight:bold">submit</a>  their papers on any topic covered by the journal.
         </p>
 
-    <br />
+        <br />
 
 
         <div id="advantages" class="row">
@@ -358,20 +373,10 @@
                 </div>
 
                 <div class="col-sm-6" id="topButton">
-                    <a href="#top"><img src="top-logo.png" alt="Top of page" border="0" height="50" width="50" style="float:right"></a>
+                    <a href="#top"><img src="top-logo.png" alt="Top of page" border="0" height="50" width="50" ></a>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 30) {
-                $('#topButton').fadeIn();
-            } else {
-                $('#topButton').fadeOut();
-            }
-        });
-    </script>
-	<script src="main.js"></script>
 </body>
 </html>
