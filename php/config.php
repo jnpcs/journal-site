@@ -1,9 +1,9 @@
 <?php
 
 // Параметры подключения к базе данных
-$username = "root"; // Логин
-$password = ""; // Пароль
-$server = "localhost"; // Сервер
+$user = "root"; // Логин
+$pass = ""; // Пароль
+$host = "localhost"; // Сервер
 $dbname = "journal_site"; // Название базы данных
 $uploaddir = "./uploads/";
 
