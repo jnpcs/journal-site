@@ -1,5 +1,5 @@
 ﻿<?php
-
+var_dump($_REQUEST);
 	include 'config.php';
 
 	// принимаем данные из формы
