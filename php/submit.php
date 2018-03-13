@@ -3,44 +3,11 @@ var_dump($_REQUEST);
 	include 'config.php';
 
 	// принимаем данные из формы
-	$authors = $_POST['authors']; 
+	$author_name = $_POST['Author_Name']; 
+	$affiliation=$_POST['Affiliation']; 
+	$email = $_POST['email'];
+	$paper_name = $_POST['paper_name'];
 	
-	foreach($authors as $auth) {
-		foreach($auth as $elem) {
-			if($elem == "") {
-				exit("Не все данные для автора введены!");
-			}
-		}
-	}
-	//$correspondence = 0;
-	
-	if($_POST['paper_name'] != "") {
-		$paper_name = $_POST['paper_name'];
-	} else exit("Необходимо ввести название статьи!");
-	
-	if($_POST['pacs_numbers'] != "") {
-		$pacs_numbers = $_POST['pacs_numbers'];
-	} else exit("Необходимо ввести PACS numbers!");
-	
-	if($_POST['keywords'] != "") {
-		$keywords = $_POST['keywords'];
-	} else exit("Необходимо ввести ключевые слова!");
-	
-	if($_POST['abstract'] != "") {
-		$abstract = $_POST['abstract'];
-	} else exit("Необходимо ввести abstract!");
-	
-	$file_name = $_FILES['file']['name'];
-	
-	$file_name = date('U').'.zip'; // количество секунд от начала эпохи
-
-	if (copy($_FILES['file']['tmp_name'], $uploaddir . $file_name)) {
-		echo "Файл успешно загружен на сервер<br />";
-	}else {
-		echo "Ошибка! Не удалось загрузить файл на сервер!<br />";
-		exit; 
-	}
-
 	//if(isset($_POST['correspondence'])) $correspondence = 1; // если поставлена галочка
 
 	//подключение к серверу
@@ -49,19 +16,36 @@ var_dump($_REQUEST);
 		$db -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db -> exec("set names utf8");
 		echo "connection established</br>";
+		$db -> exec("use $dbname");
+		$query=$db->prepare("Select count(*) from accounts where email=?");
+		$query->execute(array($email));
+		if($query->fetch(PDO::FETCH_NUM)[0]==0){
+			// new user registration
+			$query=$db->prepare("Insert into accounts (email,name,affiliation) values (?,?,?)");
+			$query->execute(array($email,$author_name,$affiliation));
+			$account_id=$db->lastInsertId();
+			$db -> exec("Insert into papers (account_id,status) values ($account_id,$status_new)");
+			$paper_id=$db->lastInsertId();
+			$file_name = date('U').'.pdf'; // количество секунд от начала эпохи
+			if (copy($_FILES['file']['tmp_name'], $uploaddir . $file_name)) {
+				echo "Файл успешно загружен на сервер<br />";
+			}else {
+				echo "Ошибка! Не удалось загрузить файл на сервер!<br />";
+				exit; 
+			}
+			$query=$db->prepare("Insert into paper_variants (paper_id,title,paper_filename) values (?,?,?)");
+			$query->execute(array($paper_id,$paper_name,$file_name));
+			die();
+		}else{
+			//user exists
+			die("user exist, login first!");
+		};
+		
 	}
 	catch(PDOException $err) {
 		echo $err -> getMessage();
 	}
 	
-	//выбор базы данных
-	try{
-		$db -> exec("use $dbname");
-	}
-	catch(PDOException $err) {
-		echo $err -> getMessage() . "<br />";
-	}
-
 	//papers
 	try {
 		$db -> exec("INSERT INTO papers (received) VALUES (NOW())");
