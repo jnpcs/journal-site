@@ -7,8 +7,10 @@ $settings = array(
     ),
     'uploaddir' => "../uploads/"
 );
-class PaperStatus {
-    const new=1;
+
+class PaperStatus 
+{
+    const submitted=1;
     const in_reviewing=2;
     const reviewed=3;
     const in_modification=4;

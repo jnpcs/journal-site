@@ -47,8 +47,21 @@ class DatabaseConnection {
         return $this->session_id;    
     }
 
-    public function authenticate() {
-        return 4;
+    public function authenticate_via_session_id($session_id) {
+        $query= $this->db->prepare(
+            "SELECT account_id FROM `sessions` WHERE session_id=? AND ip=? AND end_ts IS NULL"
+        );
+        $query->execute(array($session_id, $_SERVER['REMOTE_ADDR']));
+        if ($query->rowCount() != 1) {
+            // if no match found
+            throw new Exception("Invalid session_id");
+        }
+
+        // remember authenticated acccount_id
+        list($this->account_id) = $query->fetch(PDO::FETCH_NUM);
+        $this->session_id = $session_id;
+
+        return $this->account_id;   
     }  
     
 }

@@ -1,18 +1,21 @@
 <?php
-<<<<<<< HEAD
-    print_r($_COOKIE);
-=======
+try {
     include 'config.php';
     include 'functions.php';
-    $author_id=authentcate();    
-    if($author_id==-1){
-        echo("No such author, bye!");
-        die();
-    }else{
-        // author exists, provide his papers status
-        $db=connect_db(); // можно работать
-        $res=$db -> query("SELECT * FROM `papers` JOIN `paper_variants` USING (paper_id)  WHERE account_id==$author_id);
-        echo $res;
+    $db = new DatabaseConnection($settings['PDO']);
+ 
+    // Look for an account
+    $account_id = $db->authenticate_via_session_id($_COOKIE['session_id']);
+
+    $res = $db->db->query(
+        "SELECT * FROM `papers` JOIN `paper_variants` USING (paper_id)  WHERE account_id=$account_id"
+    );
+    echo "<pre>";
+    foreach($res as $variant) {
+        print_r($variant);
     }
->>>>>>> a17f0c4c8adedc20bf7285a744021d00cdee7037
+}
+catch (Exception $ex) {
+    die("<h1>Something went wrong</h1>". $ex->getMessage() );
+}
 ?>

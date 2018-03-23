@@ -8,7 +8,7 @@ try {
     $account_id = $db->authenticate_via_password($_POST['email'], $_POST['password']);
 
     // create new session
-    $session_id= $db->create_session();
+    $session_id= $db->create_session($_COOKIE['session_id']);
     
     // report success
     die (json_encode(array(
