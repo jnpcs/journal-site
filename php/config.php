@@ -1,10 +1,10 @@
 <?php
-
-// ��������� ����������� � ���� ������
-$user = "root"; // �����
-$pass = ""; // ������
-$host = "localhost"; // ������
-$dbname = "jnpcs"; // �������� ���� ������
-$uploaddir = "../uploads/";
-$status_new=1;
+$settings = array(
+    'PDO'   => array(
+        'user'          => 'root',
+        'pass'          => '',
+        'connection'    => 'mysql:host=localhost;dbname=jnpcs',
+    ),
+    'uploaddir' => "../uploads/"
+);
 ?>
